@@ -38,9 +38,16 @@ namespace IbadahLover.Identity
 
             services.AddDbContext<ILoveIbadahIdentityDbContext>(options =>
                 options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value));
-                //b => b.MigrationAssembly(typeof(ILoveIbadahIdentityDbContext).Assembly.FullName))); I don't need migration!
+            //b => b.MigrationAssembly(typeof(ILoveIbadahIdentityDbContext).Assembly.FullName))); I don't need migration!
 
-            services.AddIdentity<ApplicationUser, ApplicationRole>()
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            // Password Settings
+            {
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 6;
+                //options.Lockout.MaxFailedAccessAttempts = 10;
+                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+            })
                 .AddEntityFrameworkStores<ILoveIbadahIdentityDbContext>()
                 .AddDefaultTokenProviders();
 

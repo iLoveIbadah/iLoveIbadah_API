@@ -57,7 +57,8 @@ namespace IbadahLover.Identity.Services
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 Email = user.Email,
                 FullName = user.FullName,
-                UniqueId = user.UserName // I changed this from UniqueId to UserName just the name!
+                UniqueId = user.UserName, // I changed this from UniqueId to UserName just the name!
+                Roles = await _userManager.GetRolesAsync(user)
             };
 
             return response;

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
+      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
       "projectName": "IbadahLover.Domain",
-      "projectPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
       "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Domain\\obj\\",
+      "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

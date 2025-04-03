@@ -1839,11 +1839,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
+      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
       "projectName": "ILoveIbadah.Application.UnitTests",
-      "projectPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
       "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\ILoveIbadah.Application.UnitTests\\obj\\",
+      "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1865,8 +1865,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj": {
-              "projectPath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\IbadahLover.Application\\IbadahLover.Application.csproj"
+            "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj": {
+              "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj"
             }
           }
         }

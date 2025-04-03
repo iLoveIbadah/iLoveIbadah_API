@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WyfiOQs3tBk=",
+  "dgSpecHash": "DS0VHjNTdd0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AM5\\Documents\\GitHub\\IbadahLover\\ASP.NET Web Core API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
+  "projectFilePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AM5\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
