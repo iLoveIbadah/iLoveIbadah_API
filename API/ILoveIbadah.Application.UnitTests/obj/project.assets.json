@@ -738,30 +738,30 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "IbadahLover.Application/1.0.0": {
+      "iLoveIbadah.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "FluentValidation.DependencyInjectionExtensions": "11.10.0",
-          "IbadahLover.Domain": "1.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "iLoveIbadah.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/IbadahLover.Application.dll": {}
+          "bin/placeholder/iLoveIbadah.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/IbadahLover.Application.dll": {}
+          "bin/placeholder/iLoveIbadah.Application.dll": {}
         }
       },
-      "IbadahLover.Domain/1.0.0": {
+      "iLoveIbadah.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/IbadahLover.Domain.dll": {}
+          "bin/placeholder/iLoveIbadah.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/IbadahLover.Domain.dll": {}
+          "bin/placeholder/iLoveIbadah.Domain.dll": {}
         }
       }
     }
@@ -1810,24 +1810,24 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "IbadahLover.Application/1.0.0": {
+    "iLoveIbadah.Application/1.0.0": {
       "type": "project",
-      "path": "../IbadahLover.Application/IbadahLover.Application.csproj",
-      "msbuildProject": "../IbadahLover.Application/IbadahLover.Application.csproj"
+      "path": "../iLoveIbadah.Application/iLoveIbadah.Application.csproj",
+      "msbuildProject": "../iLoveIbadah.Application/iLoveIbadah.Application.csproj"
     },
-    "IbadahLover.Domain/1.0.0": {
+    "iLoveIbadah.Domain/1.0.0": {
       "type": "project",
-      "path": "../IbadahLover.Domain/IbadahLover.Domain.csproj",
-      "msbuildProject": "../IbadahLover.Domain/IbadahLover.Domain.csproj"
+      "path": "../iLoveIbadah.Domain/iLoveIbadah.Domain.csproj",
+      "msbuildProject": "../iLoveIbadah.Domain/iLoveIbadah.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "IbadahLover.Application >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "Moq >= 4.20.72",
       "Shouldly >= 4.2.1",
       "coverlet.collector >= 6.0.2",
+      "iLoveIbadah.Application >= 1.0.0",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
     ]
@@ -1839,9 +1839,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
-      "projectName": "ILoveIbadah.Application.UnitTests",
-      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
+      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj",
+      "projectName": "iLoveIbadah.Application.UnitTests",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj",
       "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
       "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
@@ -1865,8 +1865,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj": {
-              "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj"
+            "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj": {
+              "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj"
             }
           }
         }

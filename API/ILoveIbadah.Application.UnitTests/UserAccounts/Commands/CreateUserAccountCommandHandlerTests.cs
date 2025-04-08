@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using IbadahLover.Application.DTOs.UserAccount;
-using IbadahLover.Application.Features.UserAccounts.Handlers.Commands;
-using IbadahLover.Application.Features.UserAccounts.Requests.Commands;
-using IbadahLover.Application.Profiles;
-using IbadahLover.Application.Responses;
+using iLoveIbadah.Application.DTOs.UserAccount;
+using iLoveIbadah.Application.Features.UserAccounts.Handlers.Commands;
+using iLoveIbadah.Application.Features.UserAccounts.Requests.Commands;
+using iLoveIbadah.Application.Profiles;
+using iLoveIbadah.Application.Responses;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILoveIbadah.Application.UnitTests.UserAccounts.Commands
+namespace iLoveIbadah.Application.UnitTests.UserAccounts.Commands
 {
     public class CreateUserAccountCommandHandlerTests
     {

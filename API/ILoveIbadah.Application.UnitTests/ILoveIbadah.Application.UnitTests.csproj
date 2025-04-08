@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IbadahLover.Application\IbadahLover.Application.csproj" />
+    <ProjectReference Include="..\iLoveIbadah.Application\iLoveIbadah.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -765,9 +765,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Infrastructure\\IbadahLover.Infrastructure.csproj",
-      "projectName": "IbadahLover.Infrastructure",
-      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Infrastructure\\IbadahLover.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Infrastructure\\iLoveIbadah.Infrastructure.csproj",
+      "projectName": "iLoveIbadah.Infrastructure",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Infrastructure\\iLoveIbadah.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
       "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",

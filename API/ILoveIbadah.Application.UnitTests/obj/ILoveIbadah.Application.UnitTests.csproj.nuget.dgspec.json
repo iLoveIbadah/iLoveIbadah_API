@@ -1,17 +1,113 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj": {}
+    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj": {
+    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj",
-        "projectName": "IbadahLover.Application",
-        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj",
+        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj",
+        "projectName": "iLoveIbadah.Application.UnitTests",
+        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\iLoveIbadah.Application.UnitTests.csproj",
         "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
-        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\obj\\",
+        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AM5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj": {
+                "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.11.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
+        "projectName": "iLoveIbadah.Application",
+        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
+        "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
+        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +129,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj": {
-                "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj"
+              "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj": {
+                "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj"
               }
             }
           }
@@ -88,14 +184,14 @@
         }
       }
     },
-    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj": {
+    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
-        "projectName": "IbadahLover.Domain",
-        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\IbadahLover.Domain.csproj",
+        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj",
+        "projectName": "iLoveIbadah.Domain",
+        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj",
         "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
-        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Domain\\obj\\",
+        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -134,102 +230,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
-        "projectName": "ILoveIbadah.Application.UnitTests",
-        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\ILoveIbadah.Application.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
-        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\ILoveIbadah.Application.UnitTests\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\AM5\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net9.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
-            "projectReferences": {
-              "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj": {
-                "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\IbadahLover.Application\\IbadahLover.Application.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
-      },
-      "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
-          "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.11.1, )"
-            },
-            "Moq": {
-              "target": "Package",
-              "version": "[4.20.72, )"
-            },
-            "Shouldly": {
-              "target": "Package",
-              "version": "[4.2.1, )"
-            },
-            "coverlet.collector": {
-              "target": "Package",
-              "version": "[6.0.2, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.9.2, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.8.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
