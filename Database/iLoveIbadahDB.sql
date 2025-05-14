@@ -58,7 +58,7 @@ CREATE TABLE
 	  concurrency_stamp NVARCHAR (36) NULL, --for aspnetcore identity!
 	  security_stamp NVARCHAR (36) NULL, --for aspnetcore identity!
 
-	  CONSTRAINT FK_User_Account_Profile_Picture_Type_id FOREIGN KEY (Profile_Picture_Type_id) REFERENCES Profile_Picture_Type (id) ON DELETE CASCADE,
+	  CONSTRAINT FK_User_Account_Profile_Picture_Type_id FOREIGN KEY (Profile_Picture_Type_id) REFERENCES Profile_Picture_Type (id) ON DELETE SET NULL,
       CONSTRAINT UQ_User_Account_email UNIQUE (email),
 	  CONSTRAINT UQ_User_Account_normalized_email UNIQUE (normalized_email),
       CONSTRAINT UQ_User_Account_email_password_hash UNIQUE (email, password_hash),
@@ -282,8 +282,8 @@ CREATE TABLE
       --last_modified_by BIGINT NOT NULL,
       --CONSTRAINT FK_Dhikr_Type_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id),
       --CONSTRAINT FK_Dhikr_Type_last_modified_by FOREIGN KEY (last_modified_by) REFERENCES User_Account (id),
-      CONSTRAINT UQ_Dhikr_Type_created_by_full_name UNIQUE (created_by, full_name), -- Ensures a unique record per dhikr type.
-	  CONSTRAINT UQ_Dhikr_Type_created_by_arabic_full_name UNIQUE (created_by, arabic_full_name)
+      CONSTRAINT UQ_Dhikr_Type_created_by_full_name UNIQUE (created_by, full_name) -- Ensures a unique record per dhikr type.
+	  --CONSTRAINT UQ_Dhikr_Type_created_by_arabic_full_name UNIQUE (created_by, arabic_full_name)
    );
    --ALTER TABLE Dhikr_Type
    --ADD arabic_full_name NVARCHAR(255) NOT NULL DEFAULT '';
@@ -335,7 +335,7 @@ CREATE TABLE
       User_Account_id INT NOT NULL, -- Foreign key to Users table
       --average_punctuality_percentage DECIMAL(5,2) DEFAULT 0 NOT NULL, -- Average punctuality percentage
       total_tracked INT DEFAULT 0 NOT NULL, -- Total of salah records taken into account for the average punctuality percentage
-      last_tracked_at DATETIME DEFAULT GETDATE () NOT NULL,
+      last_tracked_at DATETIME NULL,
       CONSTRAINT FK_User_Salah_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE
    );
 
@@ -345,9 +345,115 @@ CREATE TABLE
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       User_Account_id INT NOT NULL, -- Foreign key to Users table
       total_performed INT DEFAULT 0 NOT NULL, -- Total dhikr performed by the user
-      last_performed_at DATETIME DEFAULT GETDATE () NOT NULL, -- Timestamp for when the overview was last updated
+      last_performed_at DATETIME NULL, -- Timestamp for when the overview was last updated
       CONSTRAINT FK_User_Dhikr_Overview_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account (id) ON DELETE CASCADE
    );
+
+GO
+CREATE TABLE Blog (
+   id INT PRIMARY KEY IDENTITY (1, 1),
+   title NVARCHAR(255) NOT NULL,
+   slug NVARCHAR(255) NOT NULL,
+   Blob_File_id INT NULL, -- The Thumbnail for the blog!
+   content NVARCHAR(MAX) NOT NULL,
+   total_views INT DEFAULT 0 NOT NULL,
+   created_at DATETIME DEFAULT GETDATE() NOT NULL,
+
+   CONSTRAINT FK_Blog_Blob_File_id FOREIGN KEY (Blob_File_id) REFERENCES Blob_File (id) ON DELETE SET NULL,
+   CONSTRAINT UQ_Blog_slug UNIQUE (slug)
+);
+GO
+
+-- =============================================
+-- Comment Table
+-- =============================================
+CREATE TABLE Comment (
+   id INT PRIMARY KEY IDENTITY (1, 1),
+   Blog_id INT NOT NULL,
+   User_Account_id INT NOT NULL,
+   content NVARCHAR(MAX) NOT NULL,
+   written_at DATETIME DEFAULT GETDATE() NOT NULL,
+   last_updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+   Comment_id INT NULL, --Parent Id, so is this a reply to another comment or a reply to the blog (top level)?
+   CONSTRAINT FK_Comment_Blog_id FOREIGN KEY (Blog_id) REFERENCES Blog(id) ON DELETE CASCADE,
+   CONSTRAINT FK_Comment_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
+   --CONSTRAINT FK_Comment_Comment_id FOREIGN KEY (Comment_id) REFERENCES Comment(id) ON DELETE CASCADE : (Couldn't put on delete cascade, sql server doesn't support it says cycle or multiple cascade path error so on delete no action I did, and i can in c# code do a delete on the comments if i want)
+   CONSTRAINT FK_Comment_Comment_id FOREIGN KEY (Comment_id) REFERENCES Comment(id) ON DELETE NO ACTION
+);
+GO
+
+-- =============================================
+-- Blog_Like Table
+-- =============================================
+CREATE TABLE Blog_Like (
+   --id INT PRIMARY KEY IDENTITY(1, 1),
+   Blog_id INT NOT NULL,
+   User_Account_id INT NOT NULL,
+   CONSTRAINT FK_Blog_Like_Blog_id FOREIGN KEY (Blog_id) REFERENCES Blog(id) ON DELETE CASCADE,
+   CONSTRAINT FK_Blog_Like_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE CASCADE,
+   CONSTRAINT UQ_Blog_Like_Blog_id_User_Account_id UNIQUE (Blog_id, User_Account_id)
+);
+GO
+
+-- =============================================
+-- Comment_Like Table
+-- =============================================
+CREATE TABLE Comment_Like (
+   --id INT PRIMARY KEY IDENTITY(1, 1),
+   Comment_id INT NOT NULL,
+   User_Account_id INT NOT NULL,
+   CONSTRAINT FK_Comment_Like_Comment_id FOREIGN KEY (Comment_id) REFERENCES Comment(id) ON DELETE CASCADE,
+   CONSTRAINT FK_Comment_Like_User_Account_id FOREIGN KEY (User_Account_id) REFERENCES User_Account(id) ON DELETE NO ACTION,
+   CONSTRAINT UQ_Comment_Like_Comment_id_User_Account_id UNIQUE (Comment_id, User_Account_id)
+);
+
+GO
+
+CREATE TABLE 
+	Category (
+		id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+		full_name NVARCHAR (50) NOT NULL,
+
+		CONSTRAINT UQ_Category_full_name UNIQUE (full_name)
+	);
+
+GO
+
+CREATE TABLE 
+	Tag (
+		id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
+		full_name NVARCHAR (50) NOT NULL, 
+		--Category_id INT NULL,
+
+		--CONSTRAINT FK_Tag_Category_id FOREIGN KEY (Category_id) REFERENCES Category (id) ON DELETE SET NULL,
+		CONSTRAINT UQ_Tag_full_name UNIQUE (full_name)
+	);
+
+GO
+
+CREATE TABLE Blog_Category_Mapping (
+   --id INT PRIMARY KEY IDENTITY(1, 1),
+   Blog_id INT NOT NULL,
+   Category_id INT NOT NULL,
+
+   CONSTRAINT FK_Blog_Category_Mapping_Blog_id FOREIGN KEY (Blog_id) REFERENCES Blog(id) ON DELETE CASCADE,
+   CONSTRAINT FK_Blog_Category_Mapping_Category_id FOREIGN KEY (Category_id) REFERENCES Category(id) ON DELETE CASCADE,
+   CONSTRAINT UQ_Blog_Category_Mapping_Blog_id_Category_id UNIQUE (Blog_id, Category_id)
+);
+
+GO
+
+CREATE TABLE Blog_Tag_Mapping (
+   --id INT PRIMARY KEY IDENTITY(1, 1),
+   Blog_id INT NOT NULL,
+   Tag_id INT NOT NULL,
+
+   CONSTRAINT FK_Blog_Tag_Mapping_Blog_id FOREIGN KEY (Blog_id) REFERENCES Blog(id) ON DELETE CASCADE,
+   CONSTRAINT FK_Blog_Tag_Mapping_Tag_id FOREIGN KEY (Tag_id) REFERENCES Tag(id) ON DELETE CASCADE,
+   CONSTRAINT UQ_Blog_Tag_Mapping_Blog_id_Tag_id UNIQUE (Blog_id, Tag_id)
+);
+
+GO
 
 --GO
 --CREATE TABLE
@@ -440,7 +546,8 @@ CREATE TABLE
 --    WHERE User_Account_id = NEW.User_Account_id;
 --END;
 --TRIGGER FOR TOTAL TRACKED IN USER SALAH OVERVIEW BY CHATGPT
-GO 
+
+ 
 CREATE TRIGGER Trigger_Update_User_Salah_Overview_total_tracked ON User_Salah_Activity AFTER INSERT AS BEGIN
 UPDATE uso
 SET
@@ -555,6 +662,17 @@ BEGIN
     END
 END;
 
+GO
+
+CREATE TRIGGER Trigger_Update_Comment ON Comment AFTER UPDATE AS BEGIN
+    -- Update last_updated_at for all updated rows
+    UPDATE Comment
+    SET last_updated_at = GETDATE()
+    WHERE id IN (SELECT id FROM inserted);
+END;
+
+GO
+
 --CREATE TRIGGER Trigger_Update_User_Account_is_permanently_banned 
 --ON User_Account 
 --AFTER UPDATE 
@@ -641,7 +759,6 @@ END;
 --        FROM SalahPunctuality;
 --    END;
 --END;
-GO
 
 ALTER TABLE Blob_File ADD CONSTRAINT FK_Blob_File_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id) ON DELETE NO ACTION;
 GO

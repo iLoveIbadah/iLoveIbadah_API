@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - iLoveIbadah</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/landing-page.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/iLoveIbadah.Website.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="page-border">
+        <div class="container layout-container">
+            <!-- Added layout-container for clarity -->
+            <!-- Header Section -->
+            <header class="site-header">
+                <div class="logo">
+                    <span class="heart">❤️</span> ILoveIbadah
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        @* <li><a href="#">FAQ</a></li> *@
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Support</a></li>
+                        <!-- Use asp-action/asp-controller for internal links if needed -->
+                        <!-- Example: <li><a asp-controller="Home" asp-action="Faq">FAQ</a></li> -->
+                    </ul>
+                </nav>
+                <div class="social-icons dark-box">
+                    <!-- Replace placeholders with actual icons/links later -->
+                    <span><a href="#">[f]</a></span>
+                    <span><a href="#">[in]</a></span>
+                    <span><a href="#">[tw]</a></span>
+                    <span><a href="#">[m]</a></span>
+                </div>
+            </header>
+
+            <main role="main" class="pb-3">
+                @RenderBody() <!-- This is where your Index.cshtml content will be injected -->
+            </main>
+
+        </div> <!-- /container layout-container -->
+        <!-- Footer Section -->
+        <footer class="site-footer text-muted">
+            <!-- Removed border-top -->
+            <div class="container footer-container">
+                <!-- Added container for width control -->
+                <!-- Footer Columns -->
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Github</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Ressources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Islamic Software Repositories</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Myself</h3>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Get in touch</h3>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- /footer-columns -->
+
+                <!-- NEW: Centered Logo Below Waitlist -->
+                <div class="footer-center-logo">
+                    <span class="heart">❤️</span> ILoveIbadah
+                </div>
+
+                <!-- REMOVED: Footer Separator (hr lines and logo) -->
+                <!-- Footer Bottom Bar -->
+                <div class="footer-bottom">
+                    <p class="copyright">© @DateTime.Now.Year - ILoveIbadah. All rights reserved.</p>
+                    <nav class="footer-legal">
+                        <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </nav>
+                    <div class="social-icons dark-box">
+                        <span><a href="#">[f]</a></span>
+                        <span><a href="#">[in]</a></span>
+                        <span><a href="#">[tw]</a></span>
+                        <span><a href="#">[m]</a></span>
+                    </div>
+                </div> <!-- /footer-bottom -->
+
+            </div> <!-- /container footer-container -->
+        </footer>
+
+        <!-- Default Scripts -->
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- Optional: If using Bootstrap -->
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

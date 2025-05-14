@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page"; // Sets the title in the browser tab (_Layout.cshtml uses this)
+}
+
+<!-- Optional: Display success/error messages from TempData -->
+@if (TempData["WaitlistMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["WaitlistMessage"]
+    </div>
+}
+@if (TempData["WaitlistError"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["WaitlistError"]
+    </div>
+}
+
+
+<!-- Main Content Section -->
+<div class="main-content">
+    <!-- Removed <main> tag as it's in _Layout -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <h1>Start Worshipping Allah<br>Like you Never did before!<br>With</h1>
+            <ul>
+                <li>- Insane Ease,</li>
+                <li>- Insane Consistency,</li>
+                <li>- Insane Love for Allah</li>
+            </ul>
+            <p class="because">Because...</p>
+            <p class="love-ibadah">I Love Ibadah</p>
+        </div>
+        <div class="hero-visual">
+            <p><strong>100% Free Forever!</strong></p>
+            <div class="app-placeholder">
+                <!-- Add an <img> tag here later if you have an image -->
+                <!-- <img src="~/images/app-screenshot.png" alt="App Screenshot" /> -->
+            </div>
+            <p>No In App Purchase!</p>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quran-verse">Quran 51:56</p>
+        <blockquote>"And I did not create the Jinn and Mankind except to worship Me."</blockquote>
+    </div>
+
+    <div class="waitlist-section">
+        <p>Join the waitlist to get notified when<br>iLoveIbadah is available for Download!</p>
+
+        <!-- NOTE: Both buttons submit to different actions now -->
+        <form method="post" class="waitlist-form">
+            @Html.AntiForgeryToken() <!-- Add AntiForgery Token -->
+            <!-- The input name "email" MUST match the parameter name in the Controller Action -->
+            <input type="email" name="email" placeholder="Email address..." required>
+
+            <!-- This button submits to the JoinWaitlist action -->
+            <button type="submit" asp-controller="Home" asp-action="JoinWaitlist">Join Waitlist Only</button>
+
+            <!-- This button submits to the JoinWaitlistAndNewsletter action -->
+            <button type="submit" asp-controller="Home" asp-action="JoinWaitlistAndNewsletter">Join Waitlist & Newsletter</button>
+
+            <span class="info-icon" title="We respect your privacy.">i</span> <!-- Added a title attribute for basic tooltip -->
+        </form>
+    </div>
+</div><!-- /main-content -->

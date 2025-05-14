@@ -28,7 +28,7 @@ namespace iLoveIbadah.API.Controllers
 
         // GET: api/<UserDhikrActivitiesController>
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<UserDhikrActivityListDto>>> GetAll()
         {
             var userDhikrActivities = await _mediator.Send(new GetUserDhikrActivityListRequest());

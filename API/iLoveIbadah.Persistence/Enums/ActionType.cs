@@ -14,6 +14,9 @@ namespace iLoveIbadah.Persistence.Enums
         Delete, //a record was deleted
         perform, //user performed dhikr
         track, //user tracked salah
+        Write, //user wrote a comment or blog
+        request,
+        response,
         confirm, //confirm a user email or profile picture type or anything else needing comfirmation
         reject, //reject demand or request of a user to change profile picture type if non-compliance with terms and conditions (advanced feature idea for future maybe insha allah)
         ban, //ban a user

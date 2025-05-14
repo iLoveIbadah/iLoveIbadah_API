@@ -1,0 +1,33 @@
+﻿using FluentValidation;
+using iLoveIbadah.Application.Contracts.Persistence;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace iLoveIbadah.Application.DTOs.Comment.Validators
+{
+    public class UpdateCommentDtoValidator : AbstractValidator<UpdateCommentDto>
+    {
+        private readonly ICommentRepository _commentRepository;
+
+        public UpdateCommentDtoValidator(ICommentRepository commentRepository)
+        {
+            _commentRepository = commentRepository;
+
+            RuleFor(p => p.Id)
+                .NotEmpty().WithMessage("{PropertyName} is required.")
+                .GreaterThan(0).WithMessage("{PropertyName} must be greater than 0.")
+                .MustAsync(async (id, token) =>
+                {
+                    var commentExists = await _commentRepository.Exists(id);
+                    return commentExists;
+                }).WithMessage("{PropertyName} does not exist.");
+
+            RuleFor(p => p.Content)
+                .NotEmpty().WithMessage("{PropertyName} is required.");
+
+        }
+    }
+}

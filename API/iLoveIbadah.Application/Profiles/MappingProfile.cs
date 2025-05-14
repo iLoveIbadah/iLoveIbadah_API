@@ -1,11 +1,19 @@
 ﻿using AutoMapper;
 using iLoveIbadah.Application.DTOs.BlobFile;
+using iLoveIbadah.Application.DTOs.Blog;
+using iLoveIbadah.Application.DTOs.BlogCategoryMapping;
+using iLoveIbadah.Application.DTOs.BlogLike;
+using iLoveIbadah.Application.DTOs.BlogTagMapping;
+using iLoveIbadah.Application.DTOs.Category;
+using iLoveIbadah.Application.DTOs.Comment;
+using iLoveIbadah.Application.DTOs.CommentLike;
 using iLoveIbadah.Application.DTOs.DhikrType;
 using iLoveIbadah.Application.DTOs.PermissionType;
 using iLoveIbadah.Application.DTOs.ProfilePictureType;
 using iLoveIbadah.Application.DTOs.RoleType;
 using iLoveIbadah.Application.DTOs.RoleTypePermissionTypeMapping;
 using iLoveIbadah.Application.DTOs.SalahType;
+using iLoveIbadah.Application.DTOs.Tag;
 using iLoveIbadah.Application.DTOs.UserAccount;
 using iLoveIbadah.Application.DTOs.UserAccountRoleTypeMapping;
 using iLoveIbadah.Application.DTOs.UserDhikrActivity;
@@ -26,6 +34,26 @@ namespace iLoveIbadah.Application.Profiles
     {
         public MappingProfile()
         {
+            CreateMap<Blog, BlogDto>().ReverseMap();
+            CreateMap<Blog, BlogListDto>().ReverseMap();
+            CreateMap<Blog, CreateBlogDto>().ReverseMap();
+            CreateMap<Blog, UpdateBlogDto>().ReverseMap();
+            CreateMap<BlogCategoryMapping, CreateBlogCategoryMappingDto>().ReverseMap();
+            CreateMap<BlogLike, CreateBlogLikeDto>().ReverseMap();
+            CreateMap<BlogTagMapping, CreateBlogTagMappingDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
+            CreateMap<Category, CategoryListDto>().ReverseMap();
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Category, UpdateCategoryDto>().ReverseMap();
+            CreateMap<Comment, CommentDto>().ReverseMap();
+            CreateMap<Comment, CommentListDto>().ReverseMap();
+            CreateMap<Comment, CreateCommentDto>().ReverseMap();
+            CreateMap<Comment, UpdateCommentDto>().ReverseMap();
+            CreateMap<CommentLike, CreateCommentLikeDto>().ReverseMap();
+            CreateMap<Tag, TagDto>().ReverseMap();
+            CreateMap<Tag, TagListDto>().ReverseMap();
+            CreateMap<Tag, CreateTagDto>().ReverseMap();
+            CreateMap<Tag, UpdateTagDto>().ReverseMap();
             CreateMap<BlobFile, BlobFileDto>().ReverseMap();
             CreateMap<BlobFile, BlobFileListDto>().ReverseMap();
             CreateMap<BlobFile, CreateBlobFileDto>().ReverseMap();

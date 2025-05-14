@@ -59,6 +59,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "EntityFramework.fr": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.10.0, )"

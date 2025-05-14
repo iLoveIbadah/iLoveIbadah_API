@@ -35,7 +35,7 @@ namespace iLoveIbadah.Identity
                 throw new Exception("jwtsettingskey is not configured properly.");
             }
 
-            services.AddDbContext<ILoveIbadahIdentityDbContext>(options =>
+            services.AddDbContext<iLoveIbadahIdentityDbContext>(options =>
                 options.UseSqlServer(configuration.GetSection("azuresqlserverconnectionstring").Value));
             //b => b.MigrationAssembly(typeof(ILoveIbadahIdentityDbContext).Assembly.FullName))); I don't need migration!
 
@@ -47,7 +47,7 @@ namespace iLoveIbadah.Identity
                 //options.Lockout.MaxFailedAccessAttempts = 10;
                 //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
             })
-                .AddEntityFrameworkStores<ILoveIbadahIdentityDbContext>()
+                .AddEntityFrameworkStores<iLoveIbadahIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IAuthService, AuthService>(provider =>

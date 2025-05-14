@@ -47,12 +47,16 @@ namespace iLoveIbadah.Persistence.Repositories
 
         public async Task<bool> PerformedOnExists(int userAccountId, DateTime performedOn, int dhikrTypeId)
         {
-            var userDhikrActivity = await _dbContext.UserDhikrActivities
-                .Include(q => q.UserAccount)
-                .Include(q => q.DhikrType)
-                .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.PerformedOn == performedOn && q.DhikrTypeId == dhikrTypeId);
+            return await _dbContext.UserDhikrActivities
+                .AnyAsync(q => q.UserAccountId == userAccountId
+                && q.PerformedOn == performedOn
+                && q.DhikrTypeId == dhikrTypeId);
+            //var userDhikrActivity = await _dbContext.UserDhikrActivities
+            //    .Include(q => q.UserAccount)
+            //    .Include(q => q.DhikrType)
+            //    .FirstOrDefaultAsync(q => q.UserAccountId == userAccountId && q.PerformedOn == performedOn && q.DhikrTypeId == dhikrTypeId);
 
-            return userDhikrActivity != null;
+            //return userDhikrActivity != null;
         }
 
         public async Task IncrementTotalPerformed(int userAccountId, DateTime performedOn, int dhikrTypeId)

@@ -1,0 +1,13 @@
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\bin\Debug\net9.0\iLoveIbadah.ServiceDefaults.deps.json
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\bin\Debug\net9.0\iLoveIbadah.ServiceDefaults.dll
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\bin\Debug\net9.0\iLoveIbadah.ServiceDefaults.pdb
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.AssemblyInfo.cs
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.sourcelink.json
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.dll
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\refint\iLoveIbadah.ServiceDefaults.dll
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\iLoveIbadah.ServiceDefaults.pdb
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.ServiceDefaults\obj\Debug\net9.0\ref\iLoveIbadah.ServiceDefaults.dll

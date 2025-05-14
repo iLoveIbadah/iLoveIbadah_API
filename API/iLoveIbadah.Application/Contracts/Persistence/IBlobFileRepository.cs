@@ -11,5 +11,6 @@ namespace iLoveIbadah.Application.Contracts.Persistence
     {
         Task<BlobFile> GetBlobFileWithDetails(int id);
         Task<List<BlobFile>> GetBlobFilesWithDetails();
+        Task<bool> Exists(string uri);
     }
 }

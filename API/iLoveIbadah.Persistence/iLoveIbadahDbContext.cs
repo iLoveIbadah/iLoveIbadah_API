@@ -21,6 +21,14 @@ namespace iLoveIbadah.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.ApplyConfiguration(new BlogConfiguration());
+            modelBuilder.ApplyConfiguration(new BlogCategoryMappingConfiguration());
+            modelBuilder.ApplyConfiguration(new BlogLikeConfiguration());
+            modelBuilder.ApplyConfiguration(new BlogTagMappingConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentLikeConfiguration());
+            modelBuilder.ApplyConfiguration(new TagConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountConfiguration());
             modelBuilder.ApplyConfiguration(new DhikrTypeConfiguration());
             modelBuilder.ApplyConfiguration(new SalahTypeConfiguration());
@@ -68,5 +76,13 @@ namespace iLoveIbadah.Persistence
         public DbSet<UserSalahActivity> UserSalahActivities { get; set; }
         public DbSet<UserDhikrOverview> UserDhikrOverviews { get; set; }
         public DbSet<UserSalahOverview> UserSalahOverviews { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogCategoryMapping> BlogCategoryMappings { get; set; }
+        public DbSet<BlogLike> BlogLikes { get; set; }
+        public DbSet<BlogTagMapping> BlogTagMappings { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<CommentLike> CommentLikes { get; set; }
+        public DbSet<Tag> Tags { get; set; }
     }
 }

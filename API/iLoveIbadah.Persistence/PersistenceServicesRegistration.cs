@@ -23,6 +23,14 @@ namespace iLoveIbadah.Persistence
             });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogLikeRepository, BlogLikeRepository>();
+            services.AddScoped<IBlogCategoryMappingRepository, BlogCategoryMappingRepository>();
+            services.AddScoped<IBlogTagMappingRepository, BlogTagMappingRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<ICommentLikeRepository, CommentLikeRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUserAccountRepository, UserAccountRepository>();
             services.AddScoped<IUserSalahActivityRepository, UserSalahActivityRepository>();
             services.AddScoped<IUserSalahOverviewRepository, UserSalahOverviewRepository>();

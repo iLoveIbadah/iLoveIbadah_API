@@ -11,10 +11,12 @@ namespace iLoveIbadah.Application.DTOs.BlobFile.Validators
 {
     public class CreateBlobFileDtoValidator : AbstractValidator<CreateBlobFileDto>
     {
+        private readonly IBlobFileRepository _blobFileRepository;
         private readonly IUserAccountRepository _userAccountRepository;
-        public CreateBlobFileDtoValidator(IUserAccountRepository userAccountRepository)
+        public CreateBlobFileDtoValidator(IUserAccountRepository userAccountRepository, IBlobFileRepository blobFileRepository)
         {
             _userAccountRepository = userAccountRepository;
+            _blobFileRepository = blobFileRepository;
 
             RuleFor(p => p.FullName)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
@@ -24,12 +26,18 @@ namespace iLoveIbadah.Application.DTOs.BlobFile.Validators
             RuleFor(p => p.Uri)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
-                .MaximumLength(300).WithMessage("{PropertyName} must not exceed 300 characters.");
+                .MaximumLength(300).WithMessage("{PropertyName} must not exceed 300 characters.")
+                .MustAsync(async (uri, token) =>
+                {
+                    var blobFileExists = await _blobFileRepository.Exists(uri);
+                    return !blobFileExists; // ensure the blob file Uri is unique in db
+                });
 
             RuleFor(p => p.Extension)
                 .NotNull();
 
             RuleFor(p => p.CreatedBy)
+                .NotEmpty().WithMessage("{PropertyName} is required.")
                 .GreaterThan(0)
                 .MustAsync(async (id, token) =>
                 {

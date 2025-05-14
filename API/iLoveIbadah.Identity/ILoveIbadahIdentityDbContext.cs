@@ -11,9 +11,9 @@ using iLoveIbadah.Identity.Models;
 
 namespace iLoveIbadah.Identity
 {
-    public class ILoveIbadahIdentityDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int, ApplicationUserClaim, ApplicationUserRole, ApplicationUserLogin, ApplicationRoleClaim, ApplicationUserToken>
+    public class iLoveIbadahIdentityDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int, ApplicationUserClaim, ApplicationUserRole, ApplicationUserLogin, ApplicationRoleClaim, ApplicationUserToken>
     {
-        public ILoveIbadahIdentityDbContext(DbContextOptions<ILoveIbadahIdentityDbContext> options) : base(options)
+        public iLoveIbadahIdentityDbContext(DbContextOptions<iLoveIbadahIdentityDbContext> options) : base(options)
         {
         }
 
