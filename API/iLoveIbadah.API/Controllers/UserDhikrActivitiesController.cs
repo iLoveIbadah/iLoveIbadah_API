@@ -28,6 +28,8 @@ namespace iLoveIbadah.API.Controllers
 
         // GET: api/<UserDhikrActivitiesController>
         [HttpGet]
+        [EndpointSummary("Get all User Dhikr Activities")]
+        [EndpointDescription("Get A List of all the User Dhikr Activities")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<UserDhikrActivityListDto>>> GetAll()
         {
@@ -130,6 +132,10 @@ namespace iLoveIbadah.API.Controllers
         public async Task<ActionResult> Update([FromBody] UpdateUserDhikrActivityDto userDhikrActivity)
         {
             var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(CustomClaimTypes.Id.ToString())?.Value;
+            if (userIdClaim == null)
+            {
+                return Unauthorized("User ID claim not found.");
+            }
             userDhikrActivity.UserAccountId = int.Parse(userIdClaim);
             var command = new UpdateUserDhikrActivityCommand { UserDhikrActivityDto = userDhikrActivity };
             await _mediator.Send(command);

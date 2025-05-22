@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LnqxdgmCTJE=",
+  "dgSpecHash": "GIeXB/8G4XM=",
   "success": true,
   "projectFilePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
   "expectedPackageFiles": [
@@ -23,8 +23,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Le package 'EntityFramework 5.0.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net8.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
       "libraryId": "EntityFramework",
       "targetGraphs": [
         "net8.0"
@@ -33,8 +35,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Le package 'EntityFramework.fr 5.0.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net8.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
       "libraryId": "EntityFramework.fr",
       "targetGraphs": [
         "net8.0"

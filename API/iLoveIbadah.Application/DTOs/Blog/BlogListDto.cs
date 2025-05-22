@@ -10,8 +10,7 @@ namespace iLoveIbadah.Application.DTOs.Blog
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Content { get; set; }
-        public int BlobFileId { get; set; } // Thumbnail!!!
+        public int? BlobFileId { get; set; } // Thumbnail!!!
         public int TotalViews { get; set; }
         public DateTime? CreatedAt { get; set; }
     }

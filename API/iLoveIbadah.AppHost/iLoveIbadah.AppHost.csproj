@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\iLoveIbadah.API\iLoveIbadah.API.csproj" />
+    <ProjectReference Include="..\iLoveIbadah.Blazor.WebApp\iLoveIbadah.Blazor.WebApp\iLoveIbadah.Blazor.WebApp.csproj" />
     <ProjectReference Include="..\iLoveIbadah.Website\iLoveIbadah.Website.csproj" />
   </ItemGroup>
 

@@ -10,7 +10,6 @@ namespace iLoveIbadah.Application.DTOs.UserDhikrActivity
     public class CreateUserDhikrActivityDto
     {
         public int? UserAccountId { get; set; }
-
         public int DhikrTypeId { get; set; }
         //[DataType(DataType.Date)]
         //public DateTime PerformedOn { get; set; }

@@ -13,7 +13,7 @@ namespace iLoveIbadah.Application.DTOs.BlobFile.Validators
     {
         private readonly IBlobFileRepository _blobFileRepository;
         private readonly IUserAccountRepository _userAccountRepository;
-        public CreateBlobFileDtoValidator(IUserAccountRepository userAccountRepository, IBlobFileRepository blobFileRepository)
+        public CreateBlobFileDtoValidator(IBlobFileRepository blobFileRepository, IUserAccountRepository userAccountRepository)
         {
             _userAccountRepository = userAccountRepository;
             _blobFileRepository = blobFileRepository;

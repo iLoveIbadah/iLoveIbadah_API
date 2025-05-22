@@ -28,6 +28,8 @@
     <Folder Include="DTOs\UserAccountRoleTypeMapping\Validators\" />
     <Folder Include="Features\BanTypes\Handlers\Commands\" />
     <Folder Include="Features\BanTypes\Requests\Commands\" />
+    <Folder Include="Features\Categories\Handlers\Commands\" />
+    <Folder Include="Features\Categories\Requests\Commands\" />
     <Folder Include="Features\PermissionTypes\Handlers\Commands\" />
     <Folder Include="Features\PermissionTypes\Requests\Commands\" />
     <Folder Include="Features\ProfilePictureTypes\Handlers\Commands\" />
@@ -38,6 +40,8 @@
     <Folder Include="Features\RoleTypes\Requests\Commands\" />
     <Folder Include="Features\SalahTypes\Handlers\Commands\" />
     <Folder Include="Features\SalahTypes\Requests\Commands\" />
+    <Folder Include="Features\Tags\Handlers\Commands\" />
+    <Folder Include="Features\Tags\Requests\Commands\" />
     <Folder Include="Features\UserAccountExternalLogins\Handlers\Commands\" />
     <Folder Include="Features\UserAccountExternalLogins\Handlers\Queries\" />
     <Folder Include="Features\UserAccountExternalLogins\Requests\Commands\" />

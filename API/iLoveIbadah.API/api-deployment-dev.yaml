@@ -1,0 +1,43 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: iloveibadah-api
+    # namespace: iloveibadah-api-dev
+spec:
+  replicas: 1
+  strategy:
+      type: RollingUpdate
+      rollingUpdate:
+          maxUnavailable: 0
+          maxSurge: 1
+          # If maxUnavailable is 0 and maxSurge is 1, then during an update, Kubernetes will first create a new pod. Then, it will wait for the new pod to become ready. Only then will it terminate an old pod. This ensures that at least one pod is always available.
+  template:
+    metadata:
+      labels:
+        app: iloveibadah-api
+    spec:
+      containers:
+      - name: iloveibadah-api
+        image: programir/iloveibadah-api:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: iloveibadah-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iloveibadah-api
+  # namespace: iloveibadah-api-dev
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 32001
+  selector:
+    app: iloveibadah-api

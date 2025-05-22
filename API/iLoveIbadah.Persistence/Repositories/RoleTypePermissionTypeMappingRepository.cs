@@ -18,6 +18,34 @@ namespace iLoveIbadah.Persistence.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task<List<RoleType>> GetRolesByPermission(int permissionTypeId)
+        {
+            var roles = await _dbContext.RoleTypePermissionTypeMappings
+                .Where(m => m.PermissionTypeId == permissionTypeId)
+                .Include(m => m.RoleType)
+                .Select(m => m.RoleType)
+                .ToListAsync();
+
+            return roles;
+        }
+
+        public async Task<List<PermissionType>> GetPermissionsByRole(int roleTypeId)
+        {
+            var permissions = await _dbContext.RoleTypePermissionTypeMappings
+                .Where(m => m.RoleTypeId == roleTypeId)
+                .Include(m => m.PermissionType)
+                .Select(m => m.PermissionType)
+                .ToListAsync();
+
+            return permissions;
+        }
+
+        public async Task<bool> Exists(int roleTypeId, int permissionTypeId)
+        {
+            return await _dbContext.RoleTypePermissionTypeMappings
+                .AnyAsync(q => q.RoleTypeId == roleTypeId && q.PermissionTypeId == permissionTypeId);
+        }
+
         //public Task<RoleTypePermissionTypeMapping> GetRoleTypePermissionTypeMappingByRoleTypeAndPermissionType(int roleTypeId, int permissionTypeId)
         //{
         //    throw new NotImplementedException();
@@ -33,22 +61,22 @@ namespace iLoveIbadah.Persistence.Repositories
         //    throw new NotImplementedException();
         //}
 
-        public async Task<List<RoleTypePermissionTypeMapping>> GetRoleTypePermissionTypeMappingsWithDetails()
-        {
-            var roleTypePermissionTypeMappings = await _dbContext.RoleTypePermissionTypeMappings
-                .Include(q => q.RoleType)
-                .Include(q => q.PermissionType)
-                .ToListAsync();
-            return roleTypePermissionTypeMappings;
-        }
+        //public async Task<List<RoleTypePermissionTypeMapping>> GetRoleTypePermissionTypeMappingsWithDetails()
+        //{
+        //    var roleTypePermissionTypeMappings = await _dbContext.RoleTypePermissionTypeMappings
+        //        .Include(q => q.RoleType)
+        //        .Include(q => q.PermissionType)
+        //        .ToListAsync();
+        //    return roleTypePermissionTypeMappings;
+        //}
 
-        public async Task<RoleTypePermissionTypeMapping> GetRoleTypePermissionTypeMappingWithDetails(int id)
-        {
-            var roleTypePermissionTypeMapping = await _dbContext.RoleTypePermissionTypeMappings
-                .Include(q => q.RoleType)
-                .Include(q => q.PermissionType)
-                .FirstOrDefaultAsync(q => q.Id == id);
-            return roleTypePermissionTypeMapping;
-        }
+        //public async Task<RoleTypePermissionTypeMapping> GetRoleTypePermissionTypeMappingWithDetails(int id)
+        //{
+        //    var roleTypePermissionTypeMapping = await _dbContext.RoleTypePermissionTypeMappings
+        //        .Include(q => q.RoleType)
+        //        .Include(q => q.PermissionType)
+        //        .FirstOrDefaultAsync(q => q.Id == id);
+        //    return roleTypePermissionTypeMapping;
+        //}
     }
 }

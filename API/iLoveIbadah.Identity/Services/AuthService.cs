@@ -141,6 +141,7 @@ namespace iLoveIbadah.Identity.Services
 
             var claims = new[]
             {
+                //new Claim(JwtRegisteredClaimNames.Sub, user.fullname? or user.email?) i saw trevoir williams add this in another course, just don't use if not necesary,
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(CustomClaimTypes.Id.ToString(), user.Id.ToString())
@@ -148,7 +149,8 @@ namespace iLoveIbadah.Identity.Services
             .Union(userClaims)
             .Union(roleClaims);
 
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettingsKey));
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettingsKey)); //here getsection key not in identityregistration and pass in authservice parameter as dependency injection!
+            //well previous comment is wrong, i already pass key trough the jwtsettings. but the issue is it has another name in appsettings so it can't bind key with jwtsettings class key property. it will be a headach to change name cause it is in azure key vault and in usersecrets so maybe TODO when migrating from azure key vault to Hashicorp Vault in future or Github Secrets or something else.
             var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
             var jwtSecurityToken = new JwtSecurityToken(

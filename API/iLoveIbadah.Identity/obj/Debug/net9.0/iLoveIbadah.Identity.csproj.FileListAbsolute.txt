@@ -4,12 +4,6 @@ C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Identity\obj\Debug\net9.0\iL
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.AssemblyInfo.cs
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.csproj.CoreCompileInputs.cache
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.sourcelink.json
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.csproj.AssemblyReference.cache
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.GeneratedMSBuildEditorConfig.editorconfig
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.AssemblyInfoInputs.cache
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.AssemblyInfo.cs
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.csproj.CoreCompileInputs.cache
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.sourcelink.json
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Identity.deps.json
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Identity.runtimeconfig.json
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Identity.dll
@@ -18,6 +12,12 @@ C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iL
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Domain.dll
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Application.pdb
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\bin\Debug\net9.0\iLoveIbadah.Domain.pdb
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.csproj.AssemblyReference.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.AssemblyInfoInputs.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.AssemblyInfo.cs
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.csproj.CoreCompileInputs.cache
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.sourcelink.json
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIba.C1443616.Up2Date
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\iLoveIbadah.Identity.dll
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Identity\obj\Debug\net9.0\refint\iLoveIbadah.Identity.dll

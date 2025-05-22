@@ -23,7 +23,8 @@ namespace iLoveIbadah.Persistence.Configurations.Entities
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_id");
             builder.Property(e => e.Content).HasColumnName("content");
             builder.Property(e => e.WrittenAt).HasColumnName("written_at");
-            builder.Property(e => e.LastUpdatedAt).HasColumnName("last_updated_at");
+            builder.Property(e => e.LastUpdatedAt).HasColumnName("last_updated_at")
+                .ValueGeneratedOnAddOrUpdate();
             builder.Property(e => e.ParentCommentId).HasColumnName("Comment_id");
         }
     }

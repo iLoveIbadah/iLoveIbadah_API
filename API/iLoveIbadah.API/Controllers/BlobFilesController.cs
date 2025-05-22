@@ -15,17 +15,30 @@ namespace iLoveIbadah.API.Controllers
     public class BlobFilesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public BlobFilesController(IMediator mediator)
+        private readonly ILogger<BlobFilesController> _logger;
+
+        public BlobFilesController(IMediator mediator, ILogger<BlobFilesController> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
+
         // GET: api/<BlobFilesController>
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<BlobFileListDto>>> GetAll()
         {
-            var blobFiles = await _mediator.Send(new GetBlobFileListRequest());
-            return blobFiles;
+            _logger.LogInformation("Made call to GetAll Blob Files Endpoint");
+            try
+            {
+                var blobFiles = await _mediator.Send(new GetBlobFileListRequest());
+                return blobFiles;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while getting all blob files.");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         // GET api/<BlobFilesController>/5

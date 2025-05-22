@@ -30,5 +30,10 @@ namespace iLoveIbadah.Persistence.Repositories
                 .FirstOrDefaultAsync(Queryable => Queryable.Id == id);
             return blobFile;
         }
+
+        public async Task<bool> Exists(string uri)
+        {
+            return await _dbContext.BlobFiles.AnyAsync(x => x.Uri == uri);
+        }
     }
 }

@@ -18,22 +18,50 @@ namespace iLoveIbadah.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsWithDetails()
+        public async Task<List<UserAccount>> GetUserAccountsByRole(int roleTypeId)
         {
-            var userAccountRoleTypeMappings = await _dbContext.UserAccountRoleTypeMappings
-                .Include(p => p.UserAccount)
-                .Include(p => p.RoleType)
+            var userAccounts = await _dbContext.UserAccountRoleTypeMappings
+                .Where(m => m.RoleTypeId == roleTypeId)
+                .Include(m => m.UserAccount)
+                .Select(m => m.UserAccount)
                 .ToListAsync();
-            return userAccountRoleTypeMappings;
+
+            return userAccounts;
         }
 
-        public async Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeMappingWithDetails(int id)
+        public async Task<List<RoleType>> GetRolesByUserAccount(int userAccountId)
         {
-            var userAccountRoleTypeMapping = await _dbContext.UserAccountRoleTypeMappings
-                .Include(p => p.UserAccount)
-                .Include(p => p.RoleType)
-                .FirstOrDefaultAsync(p => p.Id == id);
-            return userAccountRoleTypeMapping;
+            var roles = await _dbContext.UserAccountRoleTypeMappings
+                .Where(m => m.UserAccountId == userAccountId)
+                .Include(m => m.RoleType)
+                .Select(m => m.RoleType)
+                .ToListAsync();
+
+            return roles;
         }
+
+        public async Task<bool> Exists(int userAccountId, int roleTypeId)
+        {
+            return await _dbContext.UserAccountRoleTypeMappings
+                .AnyAsync(q => q.UserAccountId == userAccountId && q.RoleTypeId == roleTypeId);
+        }
+
+        //public async Task<List<UserAccountRoleTypeMapping>> GetUserAccountRoleTypeMappingsWithDetails()
+        //{
+        //    var userAccountRoleTypeMappings = await _dbContext.UserAccountRoleTypeMappings
+        //        .Include(p => p.UserAccount)
+        //        .Include(p => p.RoleType)
+        //        .ToListAsync();
+        //    return userAccountRoleTypeMappings;
+        //}
+
+        //public async Task<UserAccountRoleTypeMapping> GetUserAccountRoleTypeMappingWithDetails(int id)
+        //{
+        //    var userAccountRoleTypeMapping = await _dbContext.UserAccountRoleTypeMappings
+        //        .Include(p => p.UserAccount)
+        //        .Include(p => p.RoleType)
+        //        .FirstOrDefaultAsync(p => p.Id == id);
+        //    return userAccountRoleTypeMapping;
+        //}
     }
 }

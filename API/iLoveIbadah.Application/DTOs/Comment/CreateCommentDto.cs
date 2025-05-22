@@ -9,7 +9,7 @@ namespace iLoveIbadah.Application.DTOs.Comment
     public class CreateCommentDto
     {
         public int BlogId { get; set; }
-        public int UserAccountId { get; set; }
+        public int? UserAccountId { get; set; }
         public string Content { get; set; }
         public int? ParentCommentId { get; set; }
     }

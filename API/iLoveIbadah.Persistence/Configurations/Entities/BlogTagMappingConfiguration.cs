@@ -14,6 +14,7 @@ namespace iLoveIbadah.Persistence.Configurations.Entities
         public void Configure(EntityTypeBuilder<BlogTagMapping> builder)
         {
             builder.ToTable("Blog_Tag_Mapping");
+            builder.HasKey(bt => new { bt.BlogId, bt.TagId });
             builder.Property(e => e.BlogId).HasColumnName("Blog_id");
             builder.Property(e => e.TagId).HasColumnName("Tag_id");
         }

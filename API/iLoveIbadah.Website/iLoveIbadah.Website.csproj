@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>b6eccf29-807b-4b45-a543-301bb93e3b10</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<ContainerRepository>iLoveIbadah.Razor.Website.DotNetPublish</ContainerRepository>
   </PropertyGroup>
 
   <ItemGroup>

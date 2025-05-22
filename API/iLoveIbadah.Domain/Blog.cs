@@ -17,6 +17,6 @@ namespace iLoveIbadah.Domain
         public int? BlobFileId { get; set; } // Thumbnail!!!
         public BlobFile? BlobFile { get; set; }
         public int TotalViews { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace iLoveIbadah.Application.Contracts.Persistence
 
     public interface IRoleTypePermissionTypeMappingRepository : IGenericRepository<RoleTypePermissionTypeMapping>
     {
-        Task<List<RoleType>> GetRolesByPemission(int permissionTypeId); // get all roles that have said permission
+        Task<List<RoleType>> GetRolesByPermission(int permissionTypeId); // get all roles that have said permission
         Task<List<PermissionType>> GetPermissionsByRole(int roleTypeId); // get all permissions that said role has
         Task<bool> Exists(int roleTypeId, int permissionTypeId);
 

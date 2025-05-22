@@ -14,6 +14,7 @@ namespace iLoveIbadah.Persistence.Configurations.Entities
         public void Configure(EntityTypeBuilder<CommentLike> builder)
         {
             builder.ToTable("Comment_Like");
+            builder.HasKey(cl => new { cl.CommentId, cl.UserAccountId });
             builder.Property(e => e.CommentId).HasColumnName("Comment_id");
             builder.Property(e => e.UserAccountId).HasColumnName("User_Account_Id");
         }

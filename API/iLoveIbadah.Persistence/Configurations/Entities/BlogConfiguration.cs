@@ -18,8 +18,10 @@ namespace iLoveIbadah.Persistence.Configurations.Entities
             builder.Property(e => e.Title).HasColumnName("title");
             builder.Property(e => e.Slug).HasColumnName("slug");
             builder.Property(e => e.Content).HasColumnName("content");
-            builder.Property(e => e.TotalViews).HasColumnName("total_views");
-            builder.Property(e => e.CreatedAt).HasColumnName("created_at");
+            builder.Property(e => e.TotalViews).HasColumnName("total_views")
+                .HasDefaultValue();
+            builder.Property(e => e.CreatedAt).HasColumnName("created_at")
+                .ValueGeneratedOnAddOrUpdate();
             builder.Property(e => e.BlobFileId).HasColumnName("Blob_File_id");
         }
     }

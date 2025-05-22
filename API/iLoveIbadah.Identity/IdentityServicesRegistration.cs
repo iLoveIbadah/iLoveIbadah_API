@@ -30,6 +30,9 @@ namespace iLoveIbadah.Identity
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
             var jwtSettingsKey = configuration.GetSection("jwtsettingskey").Value;
+            //TODO don't get the key from here and pass it as parameter to authservice, instead, inside auth service in the symetricsecuritykey method go pass the key by getsection inside the parameter of the method
+            // comment ABOVE isn't correct.
+            //well previous comment is wrong, i already pass key trough the jwtsettings. but the issue is it has another name in appsettings so it can't bind key with jwtsettings class key property. it will be a headach to change name cause it is in azure key vault and in usersecrets so maybe TODO when migrating from azure key vault to Hashicorp Vault in future or Github Secrets or something else.
             if (string.IsNullOrEmpty(jwtSettingsKey))
             {
                 throw new Exception("jwtsettingskey is not configured properly.");

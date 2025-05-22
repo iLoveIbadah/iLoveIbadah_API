@@ -8,7 +8,11 @@ using iLoveIbadah.Application;
 using iLoveIbadah.Infrastructure;
 using iLoveIbadah.API.Middleware;
 using iLoveIbadah.Identity;
-
+using Serilog;
+using Microsoft.Extensions.Http.Resilience;
+//using Microsoft.Extensions.Http.Polly; // why doesn't it recognize this? i have the package Microsoft.Extensions.Http.Polly installed
+using Polly; // is this Microsoft.Extensions.Http.Polly? i don't have polly installed but Microsoft.Extensions.Http.Polly and importing Microsoft.Extensions.Http.Polly doens't work but Polly does...
+using Polly.Extensions.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,11 +55,86 @@ builder.Services.AddOpenApi(opt =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy", // for angular frontend access to this api
+    options.AddPolicy("InternalAppPolicy", // for i love ibadah cross platform apps
         builder => builder.AllowAnyOrigin()
-        .AllowAnyMethod()
-        .AllowAnyHeader());
+            .WithMethods()
+            .WithHeaders());
+
+    options.AddPolicy("ExternalAppPolicy", // for external apps or scripts that need to access the API for community
+        builder => builder.AllowAnyOrigin()
+            .WithMethods()
+            .WithHeaders());
+
+    options.AddPolicy("InternalWebsitePolicy", // only my website can access some API enpoints, so even if they have the token they cannot access it
+        builder => builder.WithOrigins("https://iloveibadah.app") // specify the allowed origin(s) here
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
+    options.AddPolicy("ExternalWebsitePolicy", // for external apps or scripts that need to access the API for community
+        builder => builder.AllowAnyOrigin()
+            .WithMethods()
+            .WithHeaders());
+
+    options.AddPolicy("DevPolicy", // for development purposes only
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
+
+builder.Host.UseSerilog((ctx, lc) =>
+    lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+//builder.Services.AddHttpClient<>(httpClient =>
+//{
+//    httpClient.BaseAddress = new Uri("https://api.example.com/"); // Replace with your API base address
+//}).AddStandardResilienceHandler(options =>
+//{
+//    options.RetryOp
+//});
+
+//builder.Services.AddHttpClient("ExternalAPI", client =>
+//    {
+//        client.BaseAddress = new Uri("https://") // External API base address!! 
+//    })
+//    .AddStandardResilienceHandler(options =>
+//    {
+//        options.Retry = new HttpRetryStrategyOptions
+//        {
+//            Delay = TimeSpan.FromSeconds(1),
+//            MaxRetryAttempts = 2, // the default is 3, can customize it if you want like here
+//        };
+
+//        options.CircuitBreaker = new HttpCircuitBreakerStrategyOptions
+//        {
+//            //DurationOfBreak = TimeSpan.FromSeconds(30),
+//            //FailureThreshold = 0.5f,
+//            SamplingDuration = TimeSpan.FromSeconds(30),
+//            MinimumThroughput = 10,
+//            FailureRatio = 0.5,
+//            BreakDuration = TimeSpan.FromSeconds(15)
+
+//        };
+//        options.AttemptTimeout = new HttpTimeoutStrategyOptions
+//        {
+//            Timeout = TimeSpan.FromSeconds(10)
+//        };
+//        options.RateLimiter = new HttpRateLimiterStrategyOptions
+//        {
+
+//        };
+
+//        //options.CircuitBreaker
+//        //options.Retry.Delay = TimeSpan.FromSeconds(1);
+//        //options.Retry.MaxRetryAttempts = 2; // the default is 3, can customize it if you want like here
+//    });
+
+// implement Services classes for external api calls then do this TODO!:
+//builder.Services.AddHttpClient<ProductService>(c =>
+//{
+//    var url = builder.Configuration["ProductEndpoint"] ?? throw new InvalidOperationException("ProductEndpoint is not set");
+
+//    c.BaseAddress = new(url);
+//}).AddStandardResilienceHandler();
 
 var app = builder.Build();
 
@@ -67,6 +146,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IbadahLover API v1"));
     app.MapScalarApiReference();
+    app.UseCors("DevPolicy"); // for development purposes only
+}
+else
+{
+    app.UseCors("InternalAppPolicy");
 }
 
 app.UseAuthentication();
@@ -75,8 +159,6 @@ app.UseHttpsRedirection();
 //app.UseAuthentication();
 app.UseRouting(); // ??? just follow tutorial don't know what it does
 app.UseAuthorization();
-
-app.UseCors("CorsPolicy");
 
 app.UseEndpoints(endpoints =>
 {

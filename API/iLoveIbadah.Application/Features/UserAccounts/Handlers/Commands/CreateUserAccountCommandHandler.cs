@@ -78,7 +78,7 @@ namespace iLoveIbadah.Application.Features.UserAccounts.Handlers.Commands
                 response.Errors = new List<string> { "Email sending failed" };
             };
 
-                return response;
+            return response;
         }
     }
 }

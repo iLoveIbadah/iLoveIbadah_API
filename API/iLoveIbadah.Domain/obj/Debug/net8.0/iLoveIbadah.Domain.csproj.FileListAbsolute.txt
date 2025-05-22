@@ -3,14 +3,14 @@ C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Domain\obj\Debug\net8.0\iLov
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.AssemblyInfo.cs
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.csproj.CoreCompileInputs.cache
 C:\Programir\Github\iLoveIbadah_API\API\IbadahLover.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.sourcelink.json
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.deps.json
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.dll
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.pdb
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.AssemblyInfoInputs.cache
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.AssemblyInfo.cs
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.csproj.CoreCompileInputs.cache
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.sourcelink.json
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.deps.json
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.dll
-C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\bin\Debug\net8.0\iLoveIbadah.Domain.pdb
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.dll
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\refint\iLoveIbadah.Domain.dll
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.pdb

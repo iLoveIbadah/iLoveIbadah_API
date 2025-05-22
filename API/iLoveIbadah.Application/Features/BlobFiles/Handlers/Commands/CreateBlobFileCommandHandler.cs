@@ -31,7 +31,7 @@ namespace iLoveIbadah.Application.Features.BlobFiles.Handlers.Commands
         public async Task<BaseCommandResponse> Handle(CreateBlobFileCommand request, CancellationToken cancellationToken)
         {
             var response = new BaseCommandResponse();
-            var validator = new CreateBlobFileDtoValidator(_userAccountRepository);
+            var validator = new CreateBlobFileDtoValidator(_blobFileRepository ,_userAccountRepository);
             var validationResult = await validator.ValidateAsync(request.BlobFileDto);
 
             //var validationResult = await validator.ValidateAsync(new CreateUserAccountDto

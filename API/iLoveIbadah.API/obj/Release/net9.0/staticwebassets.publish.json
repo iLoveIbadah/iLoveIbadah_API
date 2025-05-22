@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "T0cQG0vjYrBsz9+j2nHCg6rleLwoixkDA48Ek8dSCZM=",
-  "Source": "IbadahLover.API",
-  "BasePath": "_content/IbadahLover.API",
-  "Mode": "Default",
-  "ManifestType": "Publish",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"Y6HuSNFGM9bWg5vi6VH43+rnOnV5ICIVIMwl4UUBnH0=","Source":"iLoveIbadah.API","BasePath":"_content/iLoveIbadah.API","Mode":"Default","ManifestType":"Publish","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

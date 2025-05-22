@@ -37,7 +37,7 @@ namespace iLoveIbadah.Application.DTOs.Comment.Validators
                 .GreaterThan(0).WithMessage("{PropertyName} must be greater than 0.")
                 .MustAsync(async (id, token) =>
                 {
-                    var userAccountExists = await _userAccountRepository.Exists(id);
+                    var userAccountExists = await _userAccountRepository.Exists(id.Value);
                     return userAccountExists;
                 }).WithMessage("{PropertyName} does not exist.");
 
