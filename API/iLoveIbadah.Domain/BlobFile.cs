@@ -12,7 +12,7 @@ namespace iLoveIbadah.Domain
         public string Uri { get; set; }
         public string FullName { get; set; }
         public string Extension { get; set; }
-        public int? Size { get; set; }
+        public int Size { get; set; }
         public int CreatedBy { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using iLoveIbadah.Persistence;
 using iLoveIbadah.Application;
 using iLoveIbadah.Infrastructure;
 using iLoveIbadah.API.Middleware;
+using iLoveIbadah.Diagnostic;
 using iLoveIbadah.Identity;
 using Serilog;
 using Microsoft.Extensions.Http.Resilience;
@@ -83,6 +84,8 @@ builder.Services.AddCors(options =>
 
 builder.Host.UseSerilog((ctx, lc) =>
     lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+builder.Services.AddObservability("API", builder.Configuration, ["iLoveIbadah.API"]);
 
 //builder.Services.AddHttpClient<>(httpClient =>
 //{
@@ -166,6 +169,8 @@ app.UseEndpoints(endpoints =>
 });
 
 //app.MapControllers(); TO KNOW! if UseEndpoints from above has issue use this instead
+
+app.MapObservability();
 
 app.Run();
 

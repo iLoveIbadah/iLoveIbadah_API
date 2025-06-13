@@ -1,0 +1,53 @@
+﻿@model IEnumerable<iLoveIbadah.Website.Models.BlogListVM>
+
+@{
+    ViewData["Title"] = "Blog List";
+}
+
+<section class="wrapper">
+    <h1>Blogs</h1>
+    <p>Blogs on leveraging contemporary technology to build a better relationship with Allah (God)</p>
+</section>
+
+<table class="wrapper table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlobFileId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalViews)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlobFileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalViews)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

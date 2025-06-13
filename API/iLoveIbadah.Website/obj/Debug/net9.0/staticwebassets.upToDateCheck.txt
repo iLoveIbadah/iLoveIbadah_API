@@ -21,6 +21,7 @@ C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstra
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\css\site.css
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\css\utility.css
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
@@ -63,6 +64,7 @@ C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\jquery\L
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Website\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 wwwroot\css\landing-page.css
 wwwroot\css\site.css
+wwwroot\css\utility.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

@@ -51,13 +51,29 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[10.0.0-preview.4.25258.110, )"
+            },
             "Microsoft.Extensions.Http.Resilience": {
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[10.0.0-preview.4.25258.110, )"
+            },
             "Microsoft.Extensions.ServiceDiscovery": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.12.0, )"
             },
             "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
               "target": "Package",

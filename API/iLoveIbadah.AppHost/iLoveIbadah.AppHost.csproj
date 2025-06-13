@@ -21,4 +21,10 @@
     <ProjectReference Include="..\iLoveIbadah.Website\iLoveIbadah.Website.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Config\prometheus.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

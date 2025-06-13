@@ -1,0 +1,40 @@
+﻿@model iLoveIbadah.Website.Models.RegisterVM
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<section class="wrapper">
+    <h1>Register</h1>
+</section>
+<section class="wrapper">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FullName" class="control-label"></label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PasswordHash" class="control-label"></label>
+                    <input asp-for="PasswordHash" class="form-control" />
+                    <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Register" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

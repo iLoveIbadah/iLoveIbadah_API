@@ -14,8 +14,8 @@ namespace iLoveIbadah.Domain
         public string Slug { get; set; }
         public string Content { get; set; }
         [ForeignKey("BlobFile")]
-        public int? BlobFileId { get; set; } // Thumbnail!!!
-        public BlobFile? BlobFile { get; set; }
+        public int BlobFileId { get; set; } // Thumbnail!!!
+        public BlobFile BlobFile { get; set; }
         public int TotalViews { get; set; }
         public DateTime? CreatedAt { get; set; }
     }

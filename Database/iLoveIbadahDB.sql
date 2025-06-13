@@ -9,10 +9,10 @@ CREATE TABLE Blob_File
 (
     id INT IDENTITY(1,1) PRIMARY KEY,      -- Primary key for each blob record
     uri NVARCHAR(300) NOT NULL,        -- URI of the blob (maximum length of URI is 2083 characters but it is too long, recommanded 500 but also to long, 250 minimum but maybe to short, so 300!)
-    full_name NVARCHAR(255) NOT NULL,        -- Name of the file (optional)
-    extension NVARCHAR(100) NOT NULL,         -- MIME type or content type (optional)
-    size INT NULL,          -- Size of the blob in bytes (optional)
-	created_by INT NULL,
+    full_name NVARCHAR(255) NOT NULL,
+    extension NVARCHAR(100) NOT NULL,
+    size INT NOT NULL,          -- Size of the blob in bytes (optional)
+	created_by INT NULL, -- well because profile picutre type and user account have their file id as nullable this should't pose an issue to have it here as required. but suppose in order to create a new user a profile picture need to be passed and that profile picture needs to reference the blob file, then this is circular dependency, so i can't create blob file cause i need to know who created it, but can't create user account because i need to pass his profile picture. so just let nullable for now to revieuw for later.
 
 	--adding foreign key constraint at end because useraccount table doensn't exist when this is executed...
 	--CONSTRAINT FK_Blob_File_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id) ON DELETE CASCADE, 
@@ -24,7 +24,7 @@ CREATE TABLE
       id INT PRIMARY KEY IDENTITY (1, 1), -- Auto-incrementing primary key
       Blob_File_id INT NOT NULL, -- it takes to much space but i allow this instead of just link to image storing because restricted to limited amount of image to not deal with censoring because it is a religious app it must be heavily heavily heavily censorized (leaderboard system!) and i can't use gravatar service for exemple because they and all other services that i know don't censor the way it islamicly must!
       --created_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format Automatically sets to the current date
-      created_by INT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate)
+      created_by INT NULL, -- So user can create his own personal profile picture types just for him depending on business rule (like paid user can do so because of manual censoring work to validate ? like brining islamic belief certain body parts should be covered this is more strict than in most belief systems.)
       --last_modified_on DATE DEFAULT CONVERT(VARCHAR(10), GETDATE (), 120) NOT NULL, -- The date in YYYY-MM-DD format
       --last_modified_by BIGINT NOT NULL,
 
@@ -354,7 +354,7 @@ CREATE TABLE Blog (
    id INT PRIMARY KEY IDENTITY (1, 1),
    title NVARCHAR(255) NOT NULL,
    slug NVARCHAR(255) NOT NULL,
-   Blob_File_id INT NULL, -- The Thumbnail for the blog!
+   Blob_File_id INT NOT NULL, -- The Thumbnail for the blog!
    content NVARCHAR(MAX) NOT NULL,
    total_views INT DEFAULT 0 NOT NULL,
    created_at DATETIME DEFAULT GETDATE() NOT NULL,
@@ -763,6 +763,11 @@ GO
 ALTER TABLE Blob_File ADD CONSTRAINT FK_Blob_File_created_by FOREIGN KEY (created_by) REFERENCES User_Account (id) ON DELETE NO ACTION;
 GO
 --INSERT INTO table (column) value (x);
+INSERT INTO Blob_File (uri, full_name, extension, size) values ('test', 'test', 'svg', 100)
+GO
+INSERT INTO Profile_Picture_Type (Blob_File_id) values (1)
+
+GO
 ALTER DATABASE iLoveIbadahDB
 SET
    READ_WRITE 

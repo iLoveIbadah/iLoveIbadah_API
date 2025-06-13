@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveIbadah.Blazor.WebApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveIbadah.Blazor.WebApp.Client", "iLoveIbadah.Blazor.WebApp\iLoveIbadah.Blazor.WebApp.Client\iLoveIbadah.Blazor.WebApp.Client.csproj", "{CE33998D-2DEC-E0AD-FCD4-6D6566CFB133}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Observability", "Observability", "{ECE5F15A-126F-4E8C-8E7F-BA1D0F332196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLoveIbadah.Diagnostic", "iLoveIbadah.Diagnostic\iLoveIbadah.Diagnostic.csproj", "{D27F7344-4F98-4239-87F9-B65E2B3560E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +87,10 @@ Global
 		{CE33998D-2DEC-E0AD-FCD4-6D6566CFB133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE33998D-2DEC-E0AD-FCD4-6D6566CFB133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE33998D-2DEC-E0AD-FCD4-6D6566CFB133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27F7344-4F98-4239-87F9-B65E2B3560E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27F7344-4F98-4239-87F9-B65E2B3560E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27F7344-4F98-4239-87F9-B65E2B3560E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27F7344-4F98-4239-87F9-B65E2B3560E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +105,7 @@ Global
 		{37999DE7-DD67-FB61-9AAE-617FDA7521AD} = {185B8DB6-F774-4464-9422-D1DF6C94D42F}
 		{9186DC37-46C6-B7E4-A7CB-29E2526B7D20} = {185B8DB6-F774-4464-9422-D1DF6C94D42F}
 		{CE33998D-2DEC-E0AD-FCD4-6D6566CFB133} = {185B8DB6-F774-4464-9422-D1DF6C94D42F}
+		{D27F7344-4F98-4239-87F9-B65E2B3560E2} = {ECE5F15A-126F-4E8C-8E7F-BA1D0F332196}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55533CF9-754F-4B54-862D-9E1579CB0D4A}

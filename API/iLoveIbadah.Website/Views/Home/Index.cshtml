@@ -2,8 +2,12 @@
     ViewData["Title"] = "Home Page"; // Sets the title in the browser tab (_Layout.cshtml uses this)
 }
 
+@section Styles {
+    <link rel="stylesheet" href="~/css/landing-page.css" asp-append-version="true" />
+}
+
 <!-- Optional: Display success/error messages from TempData -->
-@if (TempData["WaitlistMessage"] != null)
+@* @if (TempData["WaitlistMessage"] != null)
 {
     <div class="alert alert-success" role="alert">
         @TempData["WaitlistMessage"]
@@ -14,11 +18,79 @@
     <div class="alert alert-danger" role="alert">
         @TempData["WaitlistError"]
     </div>
-}
+} *@
 
+<section class="wrapper hero">
+    <div class="hero__text">
+        <h1 class="hero__title">For Muslims, by Muslims!</h1>
+        <p class="hero__subtitle">A Companion App for your islamic journey!</p>
+    </div>
+    <div class="hero__visual">
+        <img class="hero__image"/>
+    </div>
+    <div class="quran-quote">
+        <p class="quran-quote__source">Quran 51:56</p>
+        <blockquote class="quran-quote__content">"And I did not create the Jinn and Mankind except to worship Me."</blockquote>
+    </div>
+</section>
+<section class="wrapper waitlist">
+    <p>Join the waitlist to get notified when<br>iLoveIbadah is available for Download!</p>
+
+    <!-- NOTE: Both buttons submit to different actions now -->
+    <form method="post" class="waitlist__form">
+        @Html.AntiForgeryToken() <!-- Add AntiForgery Token -->
+        <!-- The input name "email" MUST match the parameter name in the Controller Action -->
+        <input type="email" name="email" placeholder="Email address..." required>
+
+        <!-- This button submits to the JoinWaitlist action -->
+        <button type="submit" asp-controller="Home" asp-action="JoinWaitlist">Join Waitlist Only</button>
+
+        <!-- This button submits to the JoinWaitlistAndNewsletter action -->
+        <button type="submit" asp-controller="Home" asp-action="JoinWaitlistAndNewsletter">Join Waitlist & Newsletter</button>
+
+        <span class="info-icon" title="We respect your privacy.">i</span> <!-- Added a title attribute for basic tooltip -->
+    </form>
+</section>
+<h2 class="wrapper">Testimonials</h2>
+<section class="wrapper tastimonial">
+    <div class="card">
+        <p class="card__title">Amazing</p>
+        <p class="card__content">"I am amazed by the quality of the app despite it beign 100% Free and Open Source with no paywalls"</p>
+    </div>
+    <div class="card">
+        <p class="card__title">Amazing</p>
+        <p class="card__content">"I am amazed by the quality of the app despite it beign 100% Free and Open Source with no paywalls"</p>
+    </div>
+    <div class="card">
+        <p class="card__title">Amazing</p>
+        <p class="card__content">"I am amazed by the quality of the app despite it beign 100% Free and Open Source with no paywalls"</p>
+    </div>
+    <div class="card">
+        <p class="card__title">Amazing</p>
+        <p class="card__content">"I am amazed by the quality of the app despite it beign 100% Free and Open Source with no paywalls"</p>
+    </div>
+</section>
+<section class="wrapper waitlist">
+        <p>Join the waitlist to get notified when<br>iLoveIbadah is available for Download!</p>
+
+        <!-- NOTE: Both buttons submit to different actions now -->
+        <form method="post" class="waitlist__form">
+            @Html.AntiForgeryToken() <!-- Add AntiForgery Token -->
+            <!-- The input name "email" MUST match the parameter name in the Controller Action -->
+            <input type="email" name="email" placeholder="Email address..." required>
+
+            <!-- This button submits to the JoinWaitlist action -->
+            <button type="submit" asp-controller="Home" asp-action="JoinWaitlist">Join Waitlist Only</button>
+
+            <!-- This button submits to the JoinWaitlistAndNewsletter action -->
+            <button type="submit" asp-controller="Home" asp-action="JoinWaitlistAndNewsletter">Join Waitlist & Newsletter</button>
+
+            <span class="info-icon" title="We respect your privacy.">i</span> <!-- Added a title attribute for basic tooltip -->
+        </form>
+</section>
 
 <!-- Main Content Section -->
-<div class="main-content">
+@* <div class="wrapper main-content">
     <!-- Removed <main> tag as it's in _Layout -->
     <div class="hero-section">
         <div class="hero-text">
@@ -64,4 +136,4 @@
             <span class="info-icon" title="We respect your privacy.">i</span> <!-- Added a title attribute for basic tooltip -->
         </form>
     </div>
-</div><!-- /main-content -->
+</div> *@<!-- /main-content --> 

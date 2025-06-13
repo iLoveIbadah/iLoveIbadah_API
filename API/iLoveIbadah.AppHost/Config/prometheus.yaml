@@ -1,0 +1,26 @@
+﻿global:
+  scrape_interval: 1s # How frequently to scrape targets
+
+scrape_configs:
+  - job_name: 'iloveibadah-api' # A descriptive name for your API service job
+    static_configs:
+      # 'iloveibadah-api' should match the resource name you give your API project in AppHost.
+      # '8080' is the internal HTTP port your API service listens on.
+      # ASP.NET Core apps often default to port 8080 for HTTP when containerized.
+      # Adjust if your service uses a different internal port.
+      - targets: ['iloveibadah-api:80']
+    # If your /metrics endpoint is on a different path (default is /metrics):
+    # metrics_path: /my-custom-metrics-path
+
+  - job_name: 'iloveibadah-blazor-webapp' # A descriptive name for your Website service job
+    static_configs:
+      # 'iloveibadah-blazor-webapp' should match the resource name for your Website project in AppHost.
+      # '8080' is the internal HTTP port your Website service listens on.
+      - targets: ['iloveibadah-blazor-webapp:8082']
+ 
+# in aspire sample repo it does this only, the above code is from gemini
+# storage:
+#   tsdb:
+# out_of_order_time_window: 30m
+
+# otlp:

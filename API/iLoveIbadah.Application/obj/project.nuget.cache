@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GIeXB/8G4XM=",
+  "dgSpecHash": "tlmKmEvB00k=",
   "success": true,
   "projectFilePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,9 @@
     "C:\\Users\\AM5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.5.0\\microsoft.extensions.compliance.abstractions.9.5.0.nupkg.sha512",
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.objectpool\\8.0.16\\microsoft.extensions.objectpool.8.0.16.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\AM5\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

@@ -2450,8 +2450,7 @@
           },
           "size": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "createdBy": {
             "type": "integer",
@@ -2539,8 +2538,7 @@
           },
           "blobFileId": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "totalViews": {
             "type": "integer",
@@ -2656,8 +2654,7 @@
           },
           "size": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "createdBy": {
             "type": "integer",

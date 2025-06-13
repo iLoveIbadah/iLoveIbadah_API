@@ -1,5 +1,6 @@
 using iLoveIbadah.Blazor.WebApp.Client.Pages;
 using iLoveIbadah.Blazor.WebApp.Components;
+using iLoveIbadah.Diagnostic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.AddServiceDefaults();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddObservability("Blazor.WebApp", builder.Configuration, ["iLoveIbadah.Blazor.WebApp"]);
 
 var app = builder.Build();
 
@@ -36,5 +39,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(iLoveIbadah.Blazor.WebApp.Client._Imports).Assembly);
+
+app.MapObservability();
 
 app.Run();

@@ -36,6 +36,9 @@
               "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj": {
                 "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Application\\iLoveIbadah.Application.csproj"
               },
+              "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\iLoveIbadah.Diagnostic.csproj": {
+                "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\iLoveIbadah.Diagnostic.csproj"
+              },
               "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Identity\\iLoveIbadah.Identity.csproj": {
                 "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Identity\\iLoveIbadah.Identity.csproj"
               },
@@ -110,13 +113,33 @@
               "target": "Package",
               "version": "[9.5.0, )"
             },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.22.1-Preview.1, )"
             },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Exporter.Console": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[1.2.55, )"
+              "version": "[2.4.13, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -250,6 +273,117 @@
         }
       }
     },
+    "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\iLoveIbadah.Diagnostic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\iLoveIbadah.Diagnostic.csproj",
+        "projectName": "iLoveIbadah.Diagnostic",
+        "projectPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\iLoveIbadah.Diagnostic.csproj",
+        "packagesPath": "C:\\Users\\AM5\\.nuget\\packages\\",
+        "outputPath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Diagnostic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AM5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Exporter.Console": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Exporter.Zipkin": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.EventCounters": {
+              "target": "Package",
+              "version": "[1.5.1-alpha.1, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Runtime": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.SqlClient": {
+              "target": "Package",
+              "version": "[1.12.0-beta.1, )"
+            },
+            "SharpAbp.Abp.OpenTelemetry.Exporter.Prometheus.AspNetCore": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -296,6 +430,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Compliance.Abstractions": {
+              "target": "Package",
+              "version": "[9.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

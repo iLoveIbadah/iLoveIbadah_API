@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iLoveIbadah.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff592b17f14651f622dda7ddf2d2a1f42b058fa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdee39e11532238363e7929d9294d10819bd7023")]
 [assembly: System.Reflection.AssemblyProductAttribute("iLoveIbadah.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iLoveIbadah.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

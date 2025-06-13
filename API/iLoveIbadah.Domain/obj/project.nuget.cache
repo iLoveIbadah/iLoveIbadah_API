@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "edWOHOODios=",
+  "dgSpecHash": "4za4ThCOzds=",
   "success": true,
   "projectFilePath": "C:\\Programir\\Github\\iLoveIbadah_API\\API\\iLoveIbadah.Domain\\iLoveIbadah.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.5.0\\microsoft.extensions.compliance.abstractions.9.5.0.nupkg.sha512",
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\AM5\\.nuget\\packages\\microsoft.extensions.objectpool\\8.0.16\\microsoft.extensions.objectpool.8.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

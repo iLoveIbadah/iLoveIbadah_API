@@ -1,0 +1,61 @@
+﻿@using System.Security.Claims
+@model iLoveIbadah.Website.Models.BlogWithCommentsVM
+
+@{
+    ViewData["Title"] = "Details";
+    var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    int userId = 0;
+    int.TryParse(userIdString, out userId);
+}
+
+<section class="wrapper">
+    <h1 class="wrapper">@Model.Blog.Title</h1>
+    <p>@Model.Blog.Content</p>
+</section>
+<section class="wrapper">
+    <h2>Comments</h2>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <form asp-controller="Comment" asp-action="Create" method="post">
+            <input type="hidden" asp-for="CreateComment.BlogId" value="@Model.Blog.Id" />
+            <div class="form-group">
+                <input asp-for="CreateComment.Content" class="form-control" placeholder="Write a comment..."/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Comment" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+    }
+    else
+    {
+        <p><strong>You must be logged in to post a comment!</strong></p>
+        <hr/>
+    }
+    @foreach (var comment in Model.Comments)
+    {
+        if (comment.BlogId == Model.Blog.Id)
+        {
+            <div class="comment">
+                @*@if (comment.UserAccountId == User.Identity.)// hardcoded, test account has id 14*@
+                @if (comment.UserAccountId == userId);
+                {
+                <form asp-controller="Comment" asp-action="Update" method="post">
+                    <input type="hidden" name="Id" asp-for="UpdateComment.Id" value="@comment.Id" />
+                    <div class="form-group">
+                        <input asp-for="CreateComment.Content" class="form-control" value="@comment.Content"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Comment" class="btn btn-primary btn-block" />
+                    </div>
+                </form>
+                }
+                else
+                {
+                <p>@comment.Content</p>
+                }
+            </div>
+            <hr />
+        }
+    }
+    <a asp-action="Index">Back to List</a>
+</section>

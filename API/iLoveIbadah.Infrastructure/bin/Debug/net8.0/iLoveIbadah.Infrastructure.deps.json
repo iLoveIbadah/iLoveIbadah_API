@@ -109,6 +109,18 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.Extensions.Compliance.Abstractions/9.5.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.ObjectPool": "8.0.16"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Compliance.Abstractions.dll": {
+            "assemblyVersion": "9.5.0.0",
+            "fileVersion": "9.500.25.26209"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
@@ -136,6 +148,14 @@
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "Microsoft.Extensions.ObjectPool/8.0.16": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1625.21611"
           }
         }
       },
@@ -219,6 +239,9 @@
         }
       },
       "iLoveIbadah.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Compliance.Abstractions": "9.5.0"
+        },
         "runtime": {
           "iLoveIbadah.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -304,6 +327,13 @@
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Compliance.Abstractions/9.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jK7bWPhu60GvcVSqMXOdV6ZLOP5rnwvmlqSD2E5fTkAXwoGYUV/5U3tQbvlZtOpeXTu509eg2VEb+l66d7dtSg==",
+      "path": "microsoft.extensions.compliance.abstractions/9.5.0",
+      "hashPath": "microsoft.extensions.compliance.abstractions.9.5.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration.Abstractions/9.0.0": {
       "type": "package",
       "serviceable": true,
@@ -324,6 +354,13 @@
       "sha512": "sha512-+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.ObjectPool/8.0.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5Cq5cAKxHHZoNJAyzyAvGYW540xzRruJfqevHq4NMzkYNPREmJUmXDwNQqbz96dpZB16cNG0cfp5Gpw/eKFPAQ==",
+      "path": "microsoft.extensions.objectpool/8.0.16",
+      "hashPath": "microsoft.extensions.objectpool.8.0.16.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/9.0.0": {
       "type": "package",

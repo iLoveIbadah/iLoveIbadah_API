@@ -1,115 +1,38 @@
-﻿/* Basic Reset & Body Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Mimics hand-drawn feel */
-    /* If using Google Font: font-family: 'Caveat', cursive; */
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff; /* White background */
-    /*padding: 20px 0;*/ /* Add some space around the page border */
-}
-
-/*.page-border {
-    max-width: 1250px;*/ /* Adjust as needed */
-    /*margin: 0 auto;
-    border: 2px solid #555;*/ /* Outer border */
-    /*padding: 15px;*/ /* Space inside the border */
-/*}*/
-
-.container {
-    max-width: 1000px; /* Adjust as needed - e.g., 1140px, 960px */
-    /* This creates the ~25% margins on wider screens */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px; /* Gutters for smaller screens */
-    padding-right: 15px; /* Gutters for smaller screens */
-    width: 100%; /* Ensure it takes full width until max-width */
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-ul {
-    list-style: none;
-}
-
-/* Header Styles */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eee; /* Optional separator */
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.heart {
-    color: #ff8a8a; /* Pinkish heart */
-    margin-right: 5px;
-}
-
-.header-nav ul {
-    display: flex;
-}
-
-.header-nav li {
-    margin-left: 20px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-}
-
-.dark-box {
+﻿/*.dark-box {
     background-color: #333;
     padding: 8px 12px;
-    border-radius: 4px; /* Slightly rounded corners */
-}
+    border-radius: 4px;*/ /* Slightly rounded corners */
+/*}
 
     .dark-box a {
         color: #fff;
-        font-weight: bold; /* Make placeholders visible */
-        text-decoration: none;
+        font-weight: bold;*/ /* Make placeholders visible */
+        /*text-decoration: none;
     }
 
         .dark-box a:hover {
             color: #ccc;
-        }
+        }*/
 
 /* Main Content Styles */
-.main-content {
-    padding-top: 20px; /* Add some space above hero */
-    padding-bottom: 20px; /* Add some space below hero */
-}
+/*.main-content {
+    padding-top: 20px;*/ /* Add some space above hero */
+    /*padding-bottom: 20px;*/ /* Add some space below hero */
+/*}
 
 .hero-section {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
-    gap: 40px; /* Space between columns */
+    align-items: flex-start;*/ /* Align items to the top */
+    /*gap: 40px;*/ /* Space between columns */
     /*margin-bottom: 40px;*/
-}
+/*}
+
+
 
 .hero-text {
-    flex-basis: 55%; /* Take slightly more width */
-}
+    flex-basis: 55%;*/ /* Take slightly more width */
+/*}
 
     .hero-text h1 {
         font-size: 1.8em;
@@ -118,8 +41,8 @@ ul {
     }
 
     .hero-text ul {
-        margin-left: 20px; /* Indent bullet points */
-        margin-bottom: 20px;
+        margin-left: 20px;*/ /* Indent bullet points */
+        /*margin-bottom: 20px;
     }
 
     .hero-text li {
@@ -148,237 +71,116 @@ ul {
     }
 
 .app-placeholder {
-    border: 2px dashed #aaa; /* Dashed border for placeholder */
-    height: 400px; /* Adjust height as needed */
-    width: 90%; /* Adjust width */
-    margin: 0 auto 10px auto; /* Center and add bottom margin */
-    border-radius: 15px; /* Rounded corners like image */
-    display: flex;
+    border: 2px dashed #aaa;*/ /* Dashed border for placeholder */
+    /*height: 400px;*/ /* Adjust height as needed */
+    /*width: 90%;*/ /* Adjust width */
+    /*margin: 0 auto 10px auto;*/ /* Center and add bottom margin */
+    /*border-radius: 15px;*/ /* Rounded corners like image */
+    /*display: flex;
     align-items: center;
     justify-content: center;
     color: #aaa;
-    font-size: 0.9em;
+    font-size: 0.9em;*/
     /* background-color: #f9f9f9; Optional subtle background */
+/*}*/
+
+/* Hero Section Styles */
+.hero {
+    justify-content: center;
 }
 
 /* Quote Section */
-.quote-section {
+.quran-quote {
     text-align: center;
-    margin-top: 40px; /* Space above quote in footer */
-    margin-bottom: 30px; /* Space below quote */
-    padding: 0; /* Remove padding */
-    border: none; /* Remove borders */
+    margin-top: 40px;  Space above quote in footer 
+    margin-bottom: 30px;  Space below quote 
+    padding: 0;  Remove padding 
+    border: none;  Remove borders 
 }
 
-.quran-verse {
+.quran-quote__source {
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
-.quote-section blockquote {
+.quran-quote__content {
     font-size: 1.2em;
     font-style: italic;
-    color: #555;
 }
 
 /* Waitlist Section */
-.waitlist-section {
+.waitlist {
     text-align: center;
     margin-bottom: 30px;
 }
 
-    .waitlist-section p {
-        margin-bottom: 15px;
-    }
+.waitlist p {
+    margin-bottom: 15px;
+}
 
-.waitlist-form {
+.waitlist__form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Space between elements */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;  Space between elements 
+    flex-wrap: wrap;  Allow wrapping on smaller screens 
 }
 
-    .waitlist-form input[type="email"] {
-        padding: 10px 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-family: inherit; /* Use the same font */
-        min-width: 250px; /* Minimum width */
-    }
+.waitlist__form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;  Use the same font 
+    min-width: 250px;  Minimum width 
+}
 
-    .waitlist-form button {
-        padding: 10px 15px;
-        border: 1px solid #555;
-        background-color: #fff;
-        color: #333;
-        font-family: inherit;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+.waitlist__form button {
+    padding: 10px 15px;
+    border: 1px solid #555;
+    background-color: #fff;
+    color: #333;
+    font-family: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .waitlist-form button:hover {
-            background-color: #f0f0f0;
-        }
+.waitlist__form button:hover {
+    background-color: #f0f0f0;
+}
 
-.info-icon {
+.card {
+    justify-content: center;
+}
+
+.card__title {
+    font-weight: bold;
+}
+
+/*.info-icon {
     display: inline-block;
     border: 1px solid #888;
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    line-height: 18px; /* Center 'i' vertically */
-    text-align: center;
+    line-height: 18px;*/ /* Center 'i' vertically */
+    /*text-align: center;
     font-size: 0.8em;
     font-weight: bold;
     color: #555;
-    cursor: help; /* Indicate it's informational */
-}
-
-
-/* Footer Styles */
-.site-footer {
-    padding-top: 30px;
-    margin-top: 40px;
-    /*border-top: 1px solid #eee;*/ /* Optional separator */
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Space between columns */
-    margin-bottom: 0px;
-    flex-wrap: wrap; /* Allow wrapping */
-}
-
-.footer-col {
-    flex: 1; /* Allow columns to grow/shrink */
-    min-width: 150px; /* Prevent columns from becoming too narrow */
-}
-
-    .footer-col h3 {
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        color: #333;
-    }
-
-    .footer-col ul li {
-        margin-bottom: 8px;
-    }
-
-    .footer-col a {
-        color: #555;
-    }
-
-        .footer-col a:hover {
-            color: #000;
-        }
-
-/*.footer-separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 15px;*/ /* Space around logo */
-    /*color: #555;
-}*/
-
-    /*.footer-separator hr {
-        flex-grow: 1;
-        border: none;
-        border-top: 1px solid #ccc;
-    }
-
-    .footer-separator .heart {
-        font-size: 1.2em;*/ /* Make footer heart slightly larger */
-    /*}*/
-
-.footer-center-logo {
-    text-align: center;
-    margin-top: 20px; /* Space above logo */
-    margin-bottom: 30px; /* Space below logo */
-    font-size: 1.1em;
-    color: #555;
-}
-
-.footer-center-logo .heart {
-    font-size: 1.2em;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px; /* Add some space above the bottom bar */
-    border-top: 1px solid #eee; /* Add separator line above bottom bar */
-    font-size: 0.9em;
-    color: #777; /* Default text-muted color */
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.footer-legal a {
-    margin-left: 15px;
-    color: #777;
-}
-
-.footer-legal a:hover {
-    color: #333;
-}
-
-.footer-bottom .social-icons {
-    /* Reuse social icon styles */
-}
+    cursor: help;*/ /* Indicate it's informational */
+/*}*/
 
 /* Adjustments for smaller screens (Optional basic responsiveness) */
-@media (max-width: 768px) {
-    .site-header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .header-nav ul {
-        justify-content: center;
-        padding: 0;
-    }
-
-    .header-nav li {
-        margin: 0 10px;
-    }
-
+/*@media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
-        align-items: center; /* Center columns when stacked */
-        text-align: center; /* Center text when stacked */
-    }
+        align-items: center;*/ /* Center columns when stacked */
+        /*text-align: center;*/ /* Center text when stacked */
+    /*}
 
     .hero-text ul {
-        text-align: left; /* Keep list items left-aligned */
-        display: inline-block; /* Center the block */
-    }
-
-    .footer-columns {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-legal {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-        .footer-legal a {
-            margin: 0 8px;
-        }
-
-    .footer-bottom .social-icons {
-        margin-top: 10px;
-    }
-}
+        text-align: left;*/ /* Keep list items left-aligned */
+        /*display: inline-block;*/ /* Center the block */
+    /*}
+}*/
 

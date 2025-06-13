@@ -15,3 +15,4 @@ C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLov
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\refint\iLoveIbadah.Domain.dll
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.pdb
 C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\ref\iLoveIbadah.Domain.dll
+C:\Programir\Github\iLoveIbadah_API\API\iLoveIbadah.Domain\obj\Debug\net8.0\iLoveIbadah.Domain.csproj.AssemblyReference.cache
